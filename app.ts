@@ -1,11 +1,34 @@
-type User = {
+interface Parents {
+	mother: {
+		name: string;
+		age: number;
+		parents?: null;
+    };
+	father: {
+        name: string;
+        age: number;
+		parents? : null;
+	}
+}
+interface User {
 	name: string;
 	age: number;
-	gender: string;
+	parents: Parents;
 }
 
 let user: User = {
-	name: "John",
-    age: 30,
-    gender: "male",
+	name: 'john',
+	age: 30,
+	parents: {
+		mother: {
+			name: 'jane',
+			age: 30,
+			parents: null
+		},
+		father: {
+			name: 'eric',
+			age: 30,
+			parents: null
+		}
+	}
 }
